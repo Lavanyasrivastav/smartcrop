@@ -190,6 +190,10 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5l6 4v6l-6 4V5z"/><path d="M7 6h1v12H7z"/></svg>
           <span id="speak-label">Listen</span>
         </button>
+        <li ><a href="signup.php">Sign Up</a></li>
+        <li><a href="upload_crop.php" class="btn btn-success btn-sm mt-3">Upload Crop Image</a></li>
+
+
       </div>
     </nav>
   </header>
@@ -665,13 +669,13 @@
 
   const crop = $('#crop').value;
   const soil = $('#soil').value;
-  const ph = $('#ph').value;
+  
   const lang = $('#lang').value;
 
   $('#result').innerHTML = `<div class="skeleton" style="height:140px;"></div>`;
 
   try {
-    const res = await fetch(`http://localhost/smart-crop-advisory/backend/getAdvisory.php?crop=${encodeURIComponent(crop)}&soil=${encodeURIComponent(soil)}&ph=${encodeURIComponent(ph)}&lang=${encodeURIComponent(lang)}`);
+    const res = await fetch(`http://localhost/smart-crop-advisory/backend/getAdvisory.php?crop=${encodeURIComponent(crop)}&soil_type=${encodeURIComponent(soil)}&lang=${encodeURIComponent(lang)}`);
 
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
 
@@ -791,6 +795,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+
+<script src="https://files.bpcontent.cloud/2025/09/06/12/20250906123957-LOYH4RJW.js" defer></script>
 
 </body>
 </html>
