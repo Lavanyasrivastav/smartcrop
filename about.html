@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Smart Crop Advisory</title>
+  <link rel="icon" type="image/png" href="icon.png"> <!-- Replace with your website icon -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2c7a7b;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+    }
+    nav .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    nav .logo span {
+      font-size: 1.3em;
+      color: #fff;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://tse4.mm.bing.net/th/id/OIP.bCEE775p1AfX4LnwbjpWWQHaE7?pid=Api&P=0&h=18https://img.freepik.com/premium-photo/indian-farmer-showing-smartphone-screen-agriculture-field_75648-6447.jpg?w=2000') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 3em;
+      z-index: 1;
+    }
+
+    /* About Section */
+    .about {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+    .about img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .about-text h2 {
+      color: #2c7a7b;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Mission Section */
+    .mission {
+      background: #e6f7f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .mission h2 {
+      color: #2c7a7b;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    .mission p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.1em;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c7a7b;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="icon.png" alt="Logo"> <!-- Replace with your logo -->
+      <span>Smart Crop Advisory</span>
+    </div>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Smart Crop Advisory</h1>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="https://www.insurancejournal.com/app/uploads/2014/01/farmer.jpg" alt="Farmer">
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>
+        Smart Crop Advisory is an intelligent platform designed to help farmers and agricultural enthusiasts 
+        identify crop diseases quickly and accurately. By simply uploading or capturing a photo of your crop, 
+        our system uses advanced image recognition technology to detect possible diseases and provide 
+        effective solutions.
+      </p>
+      <p>
+        Our mission is to empower farmers with the right tools to protect their crops, 
+        improve yield, and reduce losses. Combining the power of Artificial Intelligence 
+        with practical agricultural knowledge, Smart Crop Advisory serves as a bridge between 
+        modern technology and traditional farming.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <h2>Our Mission 🌱</h2>
+    <p>
+      Together, let’s make farming smarter, healthier, and more sustainable. 
+      We believe that the fusion of technology and agriculture can bring a new era 
+      of growth and prosperity for farmers worldwide. With Smart Crop Advisory, 
+      we aim to reduce crop losses, increase yields, and improve food security for all.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Smart Crop Advisory. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

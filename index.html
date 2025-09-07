@@ -29,6 +29,29 @@
       --font-en: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       --font-dev: "Noto Sans Devanagari", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+    }
+
+    header nav .controls a,
+    header nav .controls .btn {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    header nav .controls a:hover {
+      color: var(--accent);
+    }
+
+    header nav select {
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
@@ -150,6 +173,20 @@
 
     /* Language support */
     .dev { font-family: var(--font-dev), var(--font-en); }
+    .reader-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .reader-controls .btn {
+      display: inline-flex;  /* Override block */
+      width: auto;           /* Remove full width */
+      padding: 6px 10px;     /* Compact size */
+      font-size: 14px;
+    }
+
 
   </style>
 </head>
@@ -163,38 +200,33 @@
           <small class="dev" id="subtitle">Farmer‑friendly crop advice</small>
         </div>
       </div>
-      <div class="controls">
-        <div class="reader-controls">
-          <button class="btn btn-ghost" id="toggle-simple" aria-pressed="false" title="Switch to Simple Mode">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div class="controls" style="display: flex; gap: 16px; align-items: center;">
+        <div class="reader-controls" style="display: flex; gap: 12px;">
+          <button class="btn btn-ghost" id="toggle-simple" aria-pressed="false" title="Switch to Simple Mode" style="font-size: 14px;">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span id="simple-label">Simple</span>
           </button>
-          <div class="tip">
-            <button class="btn btn-ghost" id="decrease-font" aria-label="Decrease text size">A−</button>
-            <div class="tip-box">Text size</div>
-          </div>
-          <div class="tip">
-            <button class="btn btn-ghost" id="increase-font" aria-label="Increase text size">A+</button>
-            <div class="tip-box">Text size</div>
-          </div>
+          <button class="btn btn-ghost" id="decrease-font" aria-label="Decrease text size" style="font-size:14px;">A−</button>
+          <button class="btn btn-ghost" id="increase-font" aria-label="Increase text size" style="font-size:14px;">A+</button>
         </div>
-        <label class="tip">
-          <select id="lang" class="field" aria-label="Select language">
-            <option value="en">English</option>
-            <option value="hi">हिंदी</option>
-            <option value="mr">मराठी</option>
-          </select>
-          <span class="tip-box">Language</span>
-        </label>
-        <button class="btn btn-primary" id="speak" aria-label="Read advice aloud">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5l6 4v6l-6 4V5z"/><path d="M7 6h1v12H7z"/></svg>
+
+        <select id="lang" class="field" aria-label="Select language" style="padding: 8px 12px; font-size: 14px;">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+
+        <button class="btn btn-primary" id="speak" aria-label="Read advice aloud" style="font-size: 14px;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M11 5l6 4v6l-6 4V5z"/><path d="M7 6h1v12H7z"/></svg>
           <span id="speak-label">Listen</span>
         </button>
-        <li ><a href="signup.php">Sign Up</a></li>
-        <li><a href="upload_crop.php" class="btn btn-success btn-sm mt-3">Upload Crop Image</a></li>
 
-
+        <a href="signup.php" class="btn btn-ghost" style="font-size: 14px; font-weight: 600;">Sign Up</a>
+        <a href="upload_crop.php" class="btn btn-success btn-sm" style="font-size: 14px;">Upload Crop Image</a>
+        <a style="text-decoration: none; color: white;" href="about.html">About</a>
       </div>
+
+
     </nav>
   </header>
 
